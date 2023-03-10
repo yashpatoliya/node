@@ -1,0 +1,24 @@
+<table border="1">
+    <tr>
+        <td>Name</td>
+        <td>Email</td>
+        <td>Password</td>
+        <td>Image</td>
+        <td>Action</td>
+    </tr>
+
+    <% for(let i in all) { %>
+        <tr>
+            <td><%= all[i].name %></td>
+            <td><%= all[i].email %></td>
+            <td><%= all[i].password %></td>
+            <td>
+                <img src="<%= all[i].avatar %>" width="100"/>
+            </td>
+            <td>
+                <a href="/deletaData/<%= all[i].id %>">Delete</a> ||
+                <a href="/editData/<%= all[i].id %>">Edit</a>
+            </td>
+        </tr>
+    <% } %>
+</table>
